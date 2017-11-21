@@ -1,0 +1,36 @@
+@font-face {
+  font-family: "manu_negra_regular";
+  src: url('../fonts/wcmanonegrabta-webfont.eot') format('embedded-opentype'), url('../fonts/wcmanonegrabta-webfont.eot?&1415710958#iefix') format('embedded-opentype'), url('../fonts/wcmanonegrabta-webfont.woff2') format('woff2'), url('../fonts/wcmanonegrabta-webfont.woff') format('woff'), url('../fonts/wcmanonegrabta-webfont.ttf') format('truetype'), url('../fonts/wcmanonegrabta-webfont.svg#wc_mano_negra_btaregular') format('svg')
+}
+@font-face {
+    font-family: "robotomedium";
+    src: url('../fonts/roboto-medium-webfont.eot') format('embedded-opentype'), url('../fonts/roboto-medium-webfont.eot?&1415696608#iefix') format('embedded-opentype'), url('../fonts/roboto-medium-webfont.woff2') format('woff2'), url('../fonts/roboto-medium-webfont.woff') format('woff'), url('../fonts/roboto-medium-webfont.ttf') format('truetype'), url('../fonts/roboto-medium-webfont.svg#robotomedium') format('svg')
+}
+@font-face {
+    font-family: "robotobold";
+    src: url('../fonts/roboto-bold-webfont.eot') format('embedded-opentype'), url('../fonts/roboto-bold-webfont.eot?&1415739198#iefix') format('embedded-opentype'), url('../fonts/roboto-bold-webfont.woff2') format('woff2'), url('../fonts/roboto-bold-webfont.woff') format('woff'), url('../fonts/roboto-bold-webfont.ttf') format('truetype'), url('../fonts/roboto-bold-webfont.svg#robotobold') format('svg')
+}
+@font-face {
+    font-family: "robotomediummedium_italic";
+    src: url('../fonts/roboto-mediumitalic-webfont.eot') format('embedded-opentype'), url('../fonts/roboto-mediumitalic-webfont.eot?&1415696608#iefix') format('embedded-opentype'), url('../fonts/roboto-mediumitalic-webfont.woff2') format('woff2'), url('../fonts/roboto-mediumitalic-webfont.woff') format('woff'), url('../fonts/roboto-mediumitalic-webfont.ttf') format('truetype'), url('../fonts/roboto-mediumitalic-webfont.svg#robotomedium_italic') format('svg')
+}
+.offscreen {
+	display: block;
+	position: absolute;
+	left: -500000px;
+}
+.bgContain {
+	background-size: contain !important;
+}
+a:hover, a:focus {
+	color: black;
+	text-decoration: underline;
+}
+ul[class^='css'] {
+	list-style-position: outside;
+	// max-width: 800px;
+	margin: 1em auto;
+}
+ul[class^='css'] li {
+	margin-bottom: 1em;
+}
