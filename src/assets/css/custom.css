@@ -14,13 +14,16 @@
     font-family: "robotomediummedium_italic";
     src: url('../fonts/roboto-mediumitalic-webfont.eot') format('embedded-opentype'), url('../fonts/roboto-mediumitalic-webfont.eot?&1415696608#iefix') format('embedded-opentype'), url('../fonts/roboto-mediumitalic-webfont.woff2') format('woff2'), url('../fonts/roboto-mediumitalic-webfont.woff') format('woff'), url('../fonts/roboto-mediumitalic-webfont.ttf') format('truetype'), url('../fonts/roboto-mediumitalic-webfont.svg#robotomedium_italic') format('svg')
 }
+body {
+	background: #fff url("../images/technology-sketch.svg") !important;
+	background-position: center bottom !important;
+	background-repeat: no-repeat !important;
+	background-size: 100% auto !important;
+}
 .offscreen {
 	display: block;
 	position: absolute;
 	left: -500000px;
-}
-.bgContain {
-	background-size: contain !important;
 }
 a:hover, a:focus {
 	color: black;
