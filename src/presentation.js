@@ -3,9 +3,7 @@ import React from 'react';
 import { br } from 'react-dom';
 
 // Import Spectacle Core tags
-import { Deck, Heading, ListItem, List, CodePane, Slide, Text, Link, Image, Notes} from 'spectacle';
-
-import { SVGDeliverables } from './assets/svg/deliverables.js';
+import { Deck, Heading, ListItem, List, Slide, Text, Link, Image, Notes} from 'spectacle';
 
 // Import theme
 import createTheme from 'spectacle/lib/themes/default';
@@ -16,7 +14,6 @@ require('normalize.css');
 
 const images = {
   sketchBg: require("./assets/images/technology-sketch.svg"),
-  crowd: require("./assets/images/sea-of-faces.jpg"),
   UX: require("./assets/images/digital-user-experience.png"),
   a11ywins: require("./assets/images/a11ywins.png"),
   freecodecamp: require("./assets/images/freecodecamp-example.png"),
@@ -26,9 +23,6 @@ const images = {
   marcy: require("./assets/images/marcy.jpg"),
   winning: require("./assets/images/winning.png"),
   today: require("./assets/images/today.svg"),
-  deliverables: require("./assets/images/deliverables.png"),
-  accessibilityMobile: require("./assets/images/venn-diagram.png"),
-  balancing: require("./assets/images/cairns-outline.jpg"),
   marcyDev: require("./assets/images/marcy-newdev.png"),
   target: require("./assets/images/Target2015-CSR-cover.png"),
   iansride: require("./assets/images/iansride1.jpg"),
@@ -80,59 +74,6 @@ export default class Presentation extends React.Component {
             @marcysutton
           </Text>
         </Slide>
-        {/*<Slide transition={["fade"]} bgImage={images.crowd}>
-          <Notes>
-            <p>We build stuff for users, right? Who are your users? Do you know the extent of your customer demographics?</p>
-          </Notes>
-          <Heading size={1} className="offscreen">Sea of users</Heading>
-        </Slide>*/}
-        {/*<Slide transition={["fade"]} bgImage={images.a11ywins} bgSize="cover" bgPosition="top center" bgRepeat="no-repeat" progressColor="secondary" controlColor="secondary">
-          <Notes>
-          I maintain a blog of positive accessibility examples, and it's really hard to find them...especially accessibility in flashy, modern web apps. But it doesn't have to be that way. Accessibility can be modern, and JavaScript is a necessary tool for the job. We can totally do this.
-          </Notes>
-          <Heading size={2} className="offscreen">Accessibility Wins</Heading>
-        </Slide>*/}
-        <Slide transition={["fade"]} bgImage={images.today} controlColor="secondary">
-          <Notes>
-            Today, we'll cover techniques for integrating accessibility into modern web applications. I'm excited to share this information with you, because I know you're capable of doing it! Hopefully these tips find their way into your development workflow, and we see a positive change as a result. We can't cover everything in 18 minutes, so we'll focus on common issues in JavaScript web apps.
-          </Notes>
-          <Heading size={2} className="offscreen">Today</Heading>
-        </Slide>
-        {/*<Slide transition={["fade"]} bgColor="primary" bgImage={images.marcy}>
-          <Notes>
-          Last time I was in Paris, I brought my bicycle. This time I brought my mother with me. Hi, Mom! :)
-          </Notes>
-          <Heading size={2} className="offscreen">Who is Marcy Sutton?</Heading>
-        </Slide>*/}
-        <Slide transition={["fade"]} bgColor="primary" bgImage={images.winning} bgSize="95% auto" progressColor="quartenary" controlColor="secondary">
-          <Notes>
-            My goal for this talk is to create accessibility champions out of you, and enable more users to productively use our apps and web sites. A more accessible web is in reach, but it will take involvement from all of us.
-          </Notes>
-          <Heading size={2} className="offscreen">Winning</Heading>
-        </Slide>
-        {/*<Slide transition={["fade"]}>
-          <Notes>
-          What would it take to convert a website to support mobile browsers after a big fancy redesign, when your budget was spent? I personally wouldn't be too thrilled to "implement mobile in phase 2". In fact, I'd make a lot of noise to prioritize accessibility in the MVP and prototyping phases. The earlier you can innovate the right way, the better your solution can be.
-          </Notes>
-          <Heading size={2} className="offscreen">Deliverables: desktop wireframe/design on left and mobile wireframe/design on right crossed out</Heading>
-          {SVGDeliverables}
-        </Slide>
-        <Slide transition={["fade"]} bgImage={images.accessibilityMobile} bgSize="contain" bgRepeat="no-repeat">
-          <Notes>
-          There's also a big overlap in the need for accessibility and users of mobile devices, as modern accessibility features can give someone with a disability independence, privacy, and opportunities to get ahead in life.
-
-          It's futuristic–people with disabilities are often early adopters of technology. And we've seen huge advances in technologies like voice recognition, switch control, and crowd-sourced functionality like the app BeMyEyes.
-          </Notes>
-          <Heading size={2} className="offscreen">Venn diagram of accessibility and mobile</Heading>
-        </Slide>
-        <Slide transition={["fade"]} bgImage={images.balancing} progressColor="secondary" controlColor="primary">
-          <Notes>
-          The challenge, I think, is there are a lot of competing concerns when building web apps. We have to juggle security, performance, accessibility–the "three unattractive pillars of the web". But that balancing act is our job.
-
-            TODO: make image match visual style 
-          </Notes>
-          <Heading size={2} className="offscreen">Balancing</Heading>
-        </Slide>*/}
         <Slide transition={["fade"]} bgImage={images.wesbos} bgSize="contain" bgPosition="top center" bgRepeat="no-repeat" progressColor="secondary" controlColor="quinary">
           <Notes>
           I'm going to level with you: it's rough out there for accessibility in the real world. There are pitfalls everywhere, and they impact real people. And it starts in how we learn to code.
@@ -164,28 +105,27 @@ export default class Presentation extends React.Component {
           </Notes>
           <Heading size={2} className="offscreen">Accessibility is so cool</Heading>
         </Slide>
+
+        <Slide transition={["fade"]} bgColor="primary" bgImage={images.winning} bgSize="95% auto" progressColor="quartenary" controlColor="secondary">
+          <Notes>
+            My goal for this talk is to create accessibility champions out of you, and enable more users to productively use our apps and web sites. A more accessible web is in reach, but it will take involvement from all of us.
+          </Notes>
+          <Heading size={2} className="offscreen">Winning</Heading>
+        </Slide>
+        
+        <Slide transition={["fade"]} bgImage={images.today} controlColor="secondary">
+          <Notes>
+            Today, we'll cover techniques for integrating accessibility into modern web applications. I'm excited to share this information with you, because I know you're capable of doing it! Hopefully these tips find their way into your development workflow, and we see a positive change as a result. We can't cover everything in 18 minutes, so we'll focus on common issues in JavaScript web apps.
+          </Notes>
+          <Heading size={2} className="offscreen">Today</Heading>
+        </Slide>
+
         <Slide bgImage={images.keyboard} transition={['fade']}>
           <Notes>
           To make the most out of our time together, I'm going to show you the most action packed version of how I test and fix clientside apps for accessibility, so you can make them usable for people too. Your most valuable testing tool? The keyboard. That's right, you're already equipped to start testing for accessibility.
           </Notes>
           <Heading size={2} className="offscreen">Let's get down to technical business</Heading>
         </Slide>
-        {/*<Slide>
-          <Notes>
-          With any new user interface, you should tab through it to make sure you can reach and operate every interactive control. Can you see where you are on the screen? Can you complete every user task without bailing to use the mouse or the trackpad? If not, there are your first few items to fix. 
-
-          Tab through netflix. Look for unreachable things, color contrast/subtlety of focus states, focus management. If we tab through Hulu, we can see even worse attention paid to accessibility than Netflix...this could be a lot better, starting with if they got rid of outline:0 on the links.
-
-          If I run the aXe Chrome extension on these pages, I can easily find low hanging accessibility fruit to fix.
-          </Notes>
-          <Heading size={2} textFont="secondary">Keyboard Test Demo</Heading>
-          <Text textFont="primary">
-            <Link href="https://netflix.com" textColor="tertiary">https://netflix.com</Link>
-          </Text>
-          <Text textFont="primary">
-            <Link href="https://hulu.com" textColor="tertiary">https://hulu.com</Link>
-          </Text>
-        </Slide>*/}
 
         <Slide bgColor="transparent" controlColor="secondary" progressColor="secondary">
           <Notes>
@@ -197,20 +137,11 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
 
-        {/*<Slide bgColor="transparent" controlColor="secondary" progressColor="secondary">
-          <Notes>
-         Another thing I like to do in integration tests is work in the aXe accessibility test suite. That means I can test for something complicated like color contrast at the page or component level with ease. If I use `npm install axe-webdriverjs@next`, I can add aXe's prerelease Shadow DOM support. 
-
-          </Notes>
-          <Heading size={2} textFont="secondary">Integration testing<br/>with aXe</Heading>
-          <CodePane lang="javascript" source={require('raw-loader!./examples/integration-test.js')}></CodePane>
-        </Slide>*/}
-
         <Slide controlColor="secondary" progressColor="secondary">
           <Notes>
             Tools that were used in this demo
           </Notes>
-          <Heading size={2} textFont="secondary">Resources</Heading>
+          <Heading size={2} textFont="secondary">In this demo</Heading>
           <List textFont="primary">
             <ListItem>
               Chrome Accessibility Debugger<br/>
@@ -245,6 +176,28 @@ export default class Presentation extends React.Component {
             <ListItem>
               Safari WebKit<br/>
               <Link textColor="tertiary" target="_blank" href="http://bit.ly/inert-safari">http://bit.ly/inert-safari</Link>
+            </ListItem>
+          </List>
+        </Slide>
+
+        <Slide controlColor="secondary" progressColor="secondary">
+          <Heading size={2} textFont="secondary">A11y Resources</Heading>
+          <List textFont="primary">
+            <ListItem>
+              Deque University<br/>
+              <Link textColor="tertiary" href="https://dequeuniversity.com">https://dequeuniversity.com</Link>
+            </ListItem>
+            <ListItem>
+              Egghead.io Accessibility Course<br/>
+              <Link textColor="tertiary" href="http://bit.ly/egghead-a11y">http://bit.ly/egghead-a11y</Link>
+            </ListItem>
+            <ListItem>
+              A11y Project<br/>
+              <Link textColor="tertiary" href="https://a11yproject.com">https://a11yproject.com</Link>
+            </ListItem>
+            <ListItem>
+              What Input<br/>
+              <Link textColor="tertiary" href="https://github.com/ten1seven/what-input">https://github.com/ten1seven/what-input</Link>
             </ListItem>
           </List>
         </Slide>
