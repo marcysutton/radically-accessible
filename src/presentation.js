@@ -15,8 +15,6 @@ require('normalize.css');
 const images = {
   sketchBg: require("./assets/images/technology-sketch.svg"),
   UX: require("./assets/images/digital-user-experience.png"),
-  a11ywins: require("./assets/images/a11ywins.png"),
-  freecodecamp: require("./assets/images/freecodecamp-example.png"),
   wesbos: require("./assets/images/wesbos-example.png"),
   twitter: require("./assets/images/TwitterLogo_black.svg"),
   github: require("./assets/images/github-logomark.svg"),
@@ -27,7 +25,8 @@ const images = {
   target: require("./assets/images/Target2015-CSR-cover.png"),
   iansride: require("./assets/images/iansride1.jpg"),
   sassy: require("./assets/images/sassy-outwater.jpg"),
-  keyboard: require("./assets/images/clacker-keyboard.jpg")
+  keyboard: require("./assets/images/clacker-keyboard.jpg"),
+  axe: require("./assets/images/axe-core.png")
 };
 
 const theme = createTheme(
@@ -63,15 +62,18 @@ export default class Presentation extends React.Component {
           I'm Marcy Sutton, a senior front-end engineer at Deque Systems, where I work on accessibility testing tools for developers. I love the intersection of JavaScript with HTML and CSS, and I've spent a fair amount of time writing and speaking about accessibility in JavaScript frameworks because of their impact on people. We should enable users of our applications, not put barriers in their way.
           </Notes>
           <Heading size={1} lineHeight={1} textColor="secondary" textFont="secondary">
-            Enabling Users in Client-Rendered Applications
+            Enabling Users in Client-Rendered Apps
           </Heading>
-          <Text textColor="tertiary" textFont="primary">
+          <Text textColor="secondary" textFont="primary">
             Marcy Sutton ~ Deque Systems
           </Text>
           <Text textColor="secondary" textFont="primary">
             <Image src={images.twitter} alt="Twitter" display="inline-block" padding="0.25em 0 0" margin="0 0.15em 0" width="40px" height="40px" />
             <Image src={images.github} alt="Github" display="inline-block" padding="0.25em 0 0" margin="0 0.15em 0" width="40px" height="40px" />
             @marcysutton
+          </Text>
+          <Text>
+            <Link textColor="tertiary" href="https://marcysutton.github.io/enabling-users">https://marcysutton.github.io/enabling-users</Link>
           </Text>
         </Slide>
         <Slide transition={["fade"]} bgImage={images.wesbos} bgSize="contain" bgPosition="top center" bgRepeat="no-repeat" progressColor="secondary" controlColor="quinary">
@@ -152,8 +154,8 @@ export default class Presentation extends React.Component {
               <Link textColor="tertiary" href="https://github.com/WICG/inert">https://github.com/WICG/inert</Link>
             </ListItem>
             <ListItem>
-              aXe Chrome Extension<br/>
-              <Link textColor="tertiary" href="https://bit.ly/axe-chrome">https://bit.ly/axe-chrome</Link>
+              aXe Coconut Extension<br/>
+              <Link textColor="tertiary" href="https://bit.ly/axe-coconut">https://bit.ly/axe-coconut</Link>
             </ListItem>
             <ListItem>
               aXe-WebdriverJS<br/>
@@ -192,8 +194,10 @@ export default class Presentation extends React.Component {
               <Link textColor="tertiary" href="http://bit.ly/egghead-a11y">http://bit.ly/egghead-a11y</Link>
             </ListItem>
             <ListItem>
-              A11y Project<br/>
-              <Link textColor="tertiary" href="https://a11yproject.com">https://a11yproject.com</Link>
+              Notes on Client-Rendered Accessibility<br/>
+              <Link textColor="tertiary" href="http://bit.ly/client-rendered-a11y">
+                http://bit.ly/client-rendered-a11y
+              </Link>
             </ListItem>
             <ListItem>
               What Input<br/>
@@ -203,12 +207,14 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide bgColor="transparent" controlColor="secondary" progressColor="secondary">
-          <Heading size={2} textFont="secondary">Thank you!</Heading>
+          <Heading size={2} textFont="secondary">Let’s make the web <br/>
+          more accessible!</Heading>
           <Text textColor="secondary" textFont="primary">
             <Image src={images.twitter} alt="Twitter" display="inline-block" padding="0.25em 0 0" margin="0 0.15em 0" width="40px" height="40px" />
             <Image src={images.github} alt="Github" display="inline-block" padding="0.25em 0 0" margin="0 0.15em 0" width="40px" height="40px" />
             @marcysutton
           </Text>
+          <Image src={images.axe} alt="axe-core" display="block" height="80px" margin="1em auto 0" />
         </Slide>
       </Deck>
     );

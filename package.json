@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "gh-pages": "^1.1.0",
     "spectacle-scripts": "2.0.0"
   },
+  "homepage": "https://marcysutton.github.io/enabling-users",
   "dependencies": {
     "raw-loader": "^0.5.1",
     "react": "^16.1.1",
@@ -14,6 +16,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   }
 }
