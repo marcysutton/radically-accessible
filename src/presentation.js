@@ -1,6 +1,6 @@
 // Import React
 import React from 'react';
-import { br } from 'react-dom';
+import { br, iframe } from 'react-dom';
 
 // Import Spectacle Core tags
 import { Deck, Heading, ListItem, List, Slide, Text, Link, Image, Notes} from 'spectacle';
@@ -13,11 +13,14 @@ require("./assets/css/custom.css");
 require('normalize.css');
 
 const images = {
-  sketchBg: require("./assets/images/technology-sketch.svg"),
-  UX: require("./assets/images/digital-user-experience.png"),
+  blindSkier: require("./assets/images/Blind_skier_and_guide.jpg"),
+  austriaSnow: require("./assets/images/austria_snowy_landscape-733872.jpg"),
+  habenPoster: require("./assets/images/haben-video-poster.jpg"),
+  kayak: require("./assets/images/kayak.jpg"),
+  expedia: require("./assets/images/expedia.jpg"),
   wesbos: require("./assets/images/wesbos-example.png"),
-  twitter: require("./assets/images/TwitterLogo_black.svg"),
-  github: require("./assets/images/github-logomark.svg"),
+  twitter: require("./assets/images/TwitterLogo_white.svg"),
+  github: require("./assets/images/github-logomark-white.svg"),
   marcy: require("./assets/images/marcy.jpg"),
   winning: require("./assets/images/winning.png"),
   today: require("./assets/images/today.svg"),
@@ -31,15 +34,15 @@ const images = {
 
 const theme = createTheme(
   {
-    primary: 'white',
-    secondary: '#1F2022',
-    tertiary: '#007dbc',
-    quartenary: '#849f00',
+    primary: '#000',
+    secondary: '#fff',
+    tertiary: 'hotpink',
+    quartenary: '#a6a80e',
     quinary: '#7d7e80'
   },
   {
     primary: 'robotomedium',
-    secondary: 'manu_negra_regular',
+    secondary: 'sf_alien_encountersregular',
   }
 );
 
@@ -51,29 +54,56 @@ export default class Presentation extends React.Component {
         transitionDuration={500}
         theme={theme}
       >
-        <Slide bgSize="contain" bgRepeat="no-repeat" transition={["fade"]} bgColor="black" bgImage={images.UX}>
+        <Slide transition={["fade"]} progressColor="secondary" controlColor="secondary">
+          <iframe width="1000" height="720" src="https://www.youtube-nocookie.com/embed/lHsXNUWGWWA?rel=0&amp;showinfo=0" frameBorder="0" gesture="media" allow="encrypted-media" allowFullScreen title="Youtube: old vhs ski movies"></iframe>
           <Notes>
-            <p>It's been said that if you design and develop for the extremes, the middle will take care of itself. If the diversity of your users was represented on a spectrum, or graph, would your apps be usable by people at the edges, or just the young, healthy, and wealthy folks in the middle?</p>
+            
           </Notes>
-          <Heading size={2} className="offscreen">Impacting your Users</Heading>
+          <Heading size={2} className="offscreen">Getting Radical</Heading>
         </Slide>
-        <Slide transition={["zoom"]} bgColor="transparent" bgRepeat="no-repeat" progressColor="tertiary" controlColor="secondary">
+        <Slide bgImage={images.blindSkier} transition={["fade"]} progressColor="quartenary" controlColor="quartenary">
+          <Heading className="offscreen" size={2}>That's super rad. What about disabled athletes?</Heading>
+        </Slide>
+        <Slide transition={["fade"]} progressColor="secondary" controlColor="secondary" bgImage={images.habenPoster} bgSize="920px auto" bgPosition="center center" bgRepeat="no-repeat">
+          <div className="fb-video" data-href="https://www.facebook.com/habengirma/videos/10212294760546693/" data-width="1000" data-show-text="false">
+          <blockquote cite="https://www.facebook.com/habengirma/videos/10212294760546693/" className="fb-xfbml-parse-ignore">
+            <a href="https://www.facebook.com/habengirma/videos/10212294760546693/">Powder Mountain Skiing</a>
+            <p>Deafblind skier Haben and guide Alex skiing side-by-side down snowy Powder Mountain. Alex signs turns with his right hand and Haben keeps her left hand over his right to catch the signals. Video by Common Ground Outdoor Adventure.</p>Posted by <a href="https://www.facebook.com/habengirma">Haben Girma</a> on Tuesday, February 28, 2017</blockquote>
+          </div>
+        </Slide>
+        <Slide transition={["fade"]} bgPosition="top center" bgImage={images.kayak} progressColor="secondary" controlColor="secondary">
           <Notes>
-          I'm Marcy Sutton, a senior front-end engineer at Deque Systems, where I work on accessibility testing tools for developers. I love the intersection of JavaScript with HTML and CSS, and I've spent a fair amount of time writing and speaking about accessibility in JavaScript frameworks because of their impact on people. We should enable users of our applications, not put barriers in their way.
+          What do you think would happen if Haben, or someone else with a disability tried to book a ski trip online? Or tried to pay their bills? Or watch a film?
+
+          Visuals: screenshots of online travel sites, bill pay, hulu/netflix... fade in thinking face?
           </Notes>
-          <Heading size={1} lineHeight={1} textColor="secondary" textFont="secondary">
-            Enabling Users in Client-Rendered Apps
+          <Heading size={2} className="offscreen">Kayak.com</Heading>
+        </Slide>
+        <Slide transition={["fade"]} bgPosition="top center" bgImage={images.expedia} progressColor="secondary" controlColor="secondary">
+          <Notes>
+          What do you think would happen if Haben, or someone else with a disability tried to book a ski trip online? Or tried to pay their bills? Or watch a film?
+
+          Visuals: screenshots of online travel sites, bill pay, hulu/netflix... fade in thinking face?
+          </Notes>
+          <Heading size={2} className="offscreen">Expedia.com</Heading>
+        </Slide>
+        <Slide transition={["zoom"]} progressColor="tertiary" controlColor="secondary">
+          <Notes>
+          I'm Marcy Sutton, a senior front-end engineer at Deque Systems, where I work on accessibility testing tools for developers. I'm also a snowboarder, having started riding mountains as a little kid. On the web, I love the intersection of JavaScript with HTML and CSS, and I've spent a fair amount of time writing and speaking about accessibility in JavaScript frameworks because of their impact on people. The more I get to know people in all areas of my life, I feel that we should enable all users of our applications, not put barriers in their way.
+          </Notes>
+          <Heading fit size={1} lineHeight={1} textColor="secondary" textFont="secondary">
+            Radically Accessible<br />Internet Applications <span aria-label="100" role="img">💯</span>
           </Heading>
           <Text textColor="secondary" textFont="primary">
             Marcy Sutton ~ Deque Systems
           </Text>
           <Text textColor="secondary" textFont="primary">
-            <Image src={images.twitter} alt="Twitter" display="inline-block" padding="0.25em 0 0" margin="0 0.15em 0" width="40px" height="40px" />
-            <Image src={images.github} alt="Github" display="inline-block" padding="0.25em 0 0" margin="0 0.15em 0" width="40px" height="40px" />
-            @marcysutton
+            <Image src={images.twitter} alt="Twitter" display="inline-block" padding="0.25em 0 0" margin="0 0.15em 0" width="40px" height="40px" style={{verticalAlign: 'bottom'}} />
+            <Image src={images.github} alt="Github" display="inline-block" padding="0.25em 0 0" margin="0 0.15em 0" width="40px" height="40px" style={{verticalAlign: 'bottom'}} />
+            <span style={{display:'inline-block', height: '35px'}}>@marcysutton</span>
           </Text>
           <Text>
-            <Link textColor="tertiary" href="https://marcysutton.github.io/enabling-users">https://marcysutton.github.io/enabling-users</Link>
+            <Link textColor="tertiary" href="https://marcysutton.github.io/radically-accessible">https://marcysutton.github.io/radically-accessible</Link>
           </Text>
         </Slide>
         <Slide transition={["fade"]} bgImage={images.wesbos} bgSize="contain" bgPosition="top center" bgRepeat="no-repeat" progressColor="secondary" controlColor="quinary">
