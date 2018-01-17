@@ -1,5 +1,5 @@
-# Enabling Users in Client-Rendered Applications
-[http://marcysutton.github.io/enabling-users/](http://marcysutton.github.io/enabling-users/)
+# Radically Accessible Internet Applications
+[http://marcysutton.github.io/radically-accessible/](http://marcysutton.github.io/radically-accessible/)
 
 By [Marcy Sutton](http://marcysutton.com)<br>
 Senior Front-End Engineer at [Deque Systems](http://deque.com)
@@ -8,7 +8,8 @@ Senior Front-End Engineer at [Deque Systems](http://deque.com)
 - github: [@marcysutton](https://github.com/marcysutton)
 
 ## Presenting at:
-* dotJS 2017
+* Beyond Tellerrand Munich 2018
+* ScriptConf Linz 2018
 
 ## Installation
 
@@ -19,12 +20,12 @@ Some reveal.js features require that presentations run from a local web server. 
 
 1. Clone the repository
 ```
-$ git clone git@github.com:marcysutton/enabling-users.git
+$ git clone git@github.com:marcysutton/radically-accessible.git
 ```
 
 1. Navigate to the presentation folder
 ```
-$ cd enabling-users
+$ cd radically-accessible
 ```
 
 1. Install local dependencies
