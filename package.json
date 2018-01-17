@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "spectacle-scripts": "2.0.0"
+    "gh-pages": "^1.1.0",
+    "spectacle-scripts": "^2.0.0"
   },
   "dependencies": {
     "raw-loader": "^0.5.1",
